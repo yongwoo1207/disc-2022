@@ -1,0 +1,47 @@
+<html>
+<head>
+</head>
+<body>
+    <div style="width:80vw">
+        <canvas id="myChart">
+        </canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var num = Math.floor(Math.random()*100)
+        document.write(num)
+        str = "0-99 사이의 값을 일력하시오. "
+        a = []
+        k = 0
+        hint = ""
+        while (true){
+            a[k] = prompt(str + a + " " + hint)
+            if ( num == a[k] ) {
+                document.write("Congratulation~ You guessed it at " + (k+1) + " times")
+                document.write("<br>Your input data is " + a.toString())
+             break
+      } else if ( num > a[k] ) {
+        hint = "higher value"
+      } else {
+        hint = "lower value"
+      }
+      k++
+        }
+        datainfo = {
+            lables : a,
+            datasets : [{
+                label : 'Number guess',
+                backgroundColor : ['gray', 'red'],
+                borderColor : 'blue',
+                data : a,
+                tesion : 0.5
+            }]
+        }
+        const config = {
+            type : 'line',
+            data : datainfo
+        }
+        mychart = new Chart(document.getElementById("myChart"), config)
+    </script>
+</body>
+</html>
