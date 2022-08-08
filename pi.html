@@ -1,65 +1,76 @@
-<html><head></head><body>
-    <div style="width:80vw"><canvas id="myChart"></canvas></div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+<html>
+  <head>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div style="width: 80vw;">
+            <canvas id="myChart"></canvas>
+        </div>
     <script>
-        kk = 0
-        nt = []
-        pt = []
-        for ( i=0 ; i<100000001 ; i++ ) {
-            x = Math.random()
-            y = Math.random()
-            if ( (x*x+y*y) < 1 ) kk++
-            if ( i == 100 ) padd(i,kk)
-            if ( i == 1000 ) padd(i,kk)
-            if ( i == 10000 ) padd(i,kk)
-            if ( i == 100000 ) padd(i,kk)
-            if ( i == 1000000 ) padd(i,kk)
-        }
-        function padd(t,k) {
-            alert(t + ":" + k + ":" + 4*k/t)
-            nt.push(t); pt.push(4*k/t);pi.push(Math.PI)
-        }
-        const labels = [
-            '100',
-            '1000',
-            '10000',
-            '100000',
-            '1000000',
-            '10000000',
-            '100000000',
-            '200000000'
-        ];
 
+      let inCircleCount = 0;
 
-    function lineChart(){
-        var data = {
-            labels: labels, pi,
-            datasets: [
-                {
-                    label: nt,
-                    fillColor: "rgba(220,220,220,0.2)",
-                    strokeColor: "rgba(220,220,220,1)",
-                    pointColor: "rgba(220,220,220,1)",
-                    pointStrokeColor: "#fff",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(220,220,220,1)",
-                    data: nt
+      let labels = [];
+      let randomData = [];
+      let answerData = [];
+
+      for(let i = 0; i <= 100000000; i++){
+        let x = Math.random();
+        let y = Math.random();
+
+        if(x * x + y * y < 1) inCircleCount++;
+       
+        if (
+          i == 100 ||
+          i == 1000 ||
+          i == 10000 ||
+          i == 100000 ||
+          i == 1000000 ||
+          i == 10000000 ||
+          i == 20000000 ||
+          i == 30000000 ||
+          i == 40000000 ||
+          i == 50000000 ||
+          i == 60000000 ||
+          i == 70000000 ||
+          i == 80000000 ||
+          i == 90000000 ||
+          i == 100000000 ){
+          labels.push(i)
+          randomData.push(4 * inCircleCount/i)
+          answerData.push(Math.PI)
+          //alert(4 * inCircleCount / i)
+        }
+
+      }
+
+            const data = {
+                labels: labels,
+                datasets: [{
+                    label: "Pie",
+                    backgroundColor: ['rgba(75, 192, 192, 0.2)'],
+                    borderColor: 'black',
+                    data: randomData,
+                    tension: 0.5
                 },
-
-                {
-                    label: PI,
-                    fillColor: "rgba(151,187,205,0.2)",
-                    strokeColor: "rgba(151,187,205,1)",
-                    pointColor: "rgba(151,187,205,1)",
-                    pointStrokeColor: "#fff",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(151,187,205,1)",
-                    data: pt
-                }
-            ]
+        {
+                    label: "Answer",
+                    backgroundColor: ['gray', 'red'],
+                    borderColor: 'orange',
+                    data: answerData,
+                    tension: 0.5
+                }]
             };
 
-}
+            const config = {
+                type: 'line',
+                data: data
+            };
+
+            const myChart = new Chart(
+                document.getElementById('myChart'),
+                config
+            );
     </script>
-    </body></html>
+  </body>
+</html>
