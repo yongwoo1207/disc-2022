@@ -2,52 +2,52 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="carbon_footprint_cal/style.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
-        <div id="top">
+        <script src="fun.js"></script>
+        <div id="top_box">
         <div id="logo_box">
             <img id="logo_img" src="https://cdn.codingworldnews.com/news/photo/202109/6087_7670_07.jpg">
         </div>
         <div id="name"><h1>나의 탄소발자국 계산기</h1></div>
         </div>
+        <div class="cont_box">
         <div class="option_box">
-            <div class="transport"> 
+            <div class="transport">
                 <h1 class="title">교통</h1>
-                <button id="tr_btn_1" class="tr_btn">과기대 - 석계 <br>버스</button> <!---->
-                <button id="tr_btn_2" class="tr_btn">과기대 - 공릉역 <br>버스</button>
-                <button id="tr_btn_3" class="tr_btn">과기대 - 석계 <br>택시</button>
-                <button id="tr_btn_4" class="tr_btn">과기대 - 공릉역 <br>택시</button>
+                <button id="tr_btn_1" class="tr_btn" onclick="click_tr1()">과기대 - 석계 <br>버스</button>
+                <button id="tr_btn_2" class="tr_btn" onclick="click_tr2()">과기대 - 공릉역 <br>버스</button>
+                <button id="tr_btn_3" class="tr_btn" onclick="click_tr3()">과기대 - 석계 <br>택시</button>
+                <button id="tr_btn_4" class="tr_btn" onclick="click_tr4()">과기대 - 공릉역 <br>택시</button>
             </div>
             <div class="eat">
                 <h1 class="title">식음료</h1>
-                <button id = "ea_btn_1" class="ea_btn">아메리카노 1잔</button>
-                <button id = "ea_btn_2" class="ea_btn">과자 1봉</button>
-                <button id = "ea_btn_3" class="ea_btn">피자</button>
-                <button id = "ea_btn_4" class="ea_btn">맥주 1캔</button><!--600g-->
-                <button id = "ea_btn_5"class="ea_btn">치킨 1마리</button><!--2100g-->
-                <button id = "ea_btn_6"class="ea_btn">햄버거 세트</button><!--3700g-->
-                <button id = "ea_btn_7"class="ea_btn">학식 1끼</button><!--3526g 출처 서울대 학식-->
+                <button id = "ea_btn_1" class="ea_btn" onclick="click_ea1()">아메리카노 1잔</button>
+                <button id = "ea_btn_2" class="ea_btn" onclick="click_ea2()">과자 1봉</button>
+                <button id = "ea_btn_3" class="ea_btn" onclick="click_ea3()">피자</button>
+                <button id = "ea_btn_4" class="ea_btn" onclick="click_ea4()">맥주 1캔</button><!--600g-->
+                <button id = "ea_btn_5" class="ea_btn" onclick="click_ea5()">치킨 1마리</button><!--2100g-->
+                <button id = "ea_btn_6" class="ea_btn" onclick="click_ea6()">햄버거 세트</button><!--3700g-->
+                <button id = "ea_btn_7" class="ea_btn" onclick="click_ea7()">학식 1끼</button><!--3526g 출처 서울대 학식-->
             </div>
             <div class="life">
                 <h1 class="title">생활</h1>
-                <button id="li_btn_1" class="li_btn">샤워</button>
-                <button id="li_btn_2" class="li_btn">에어컨</button>
-                <button id="li_btn_3" class="li_btn">피자</button>
-                <button id="li_btn_4" class="li_btn">에어컨</button>
-                <button id="li_btn_5" class="li_btn">피자</button>
+                <button id="li_btn_1" class="li_btn" onclick="click_li1()">샤워 15분</button>
+                <button id="li_btn_2" class="li_btn" onclick="click_li2()">에어컨 1시간</button>
+                <button id="li_btn_3" class="li_btn" onclick="click_li3()">컴퓨터 1시간</button>
+                <button id="li_btn_4" class="li_btn" onclick="click_li4()">청바지 1벌</button>
+                <button id="li_btn_5" class="li_btn" onclick="click_li5()">배달 1회</button>
+            </div>
+        </div><!--지구 생태용량 초과의 날 개념으로 결과 작성-->
+        <div class="output_box">
+            <div class="title"><h1>입력값</h1></div>
+            <div id="output"></div>
+            <div class="result">
+                <div class="title"><h1>하루 탄소 배출 총량</h1></div>
             </div>
         </div>
-        <div class="input_box">
-            <div class="">옵션</div>
 
-        </div><!--지구 생태용량 초과의 날 개념으로 결과 작성-->
-        <div class="result_box">
-            <div>결과</div>
-            <div><textarea id='result' disabled></textarea></div>
-        </div>
-        <div class ="bottom">
-            <div class =""></div>
         </div>
     </body>
 </html>
