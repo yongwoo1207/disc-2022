@@ -1,8 +1,4 @@
-body{  /*footer를 하단에 고정시키기 위해 부모 클래스에 하는 설정*/
-    position:relative;
-    height: auto;
-}
-#top{
+#top_box{
     width: 100%;
     height: 100px;
     float: left;
@@ -38,31 +34,27 @@ body{  /*footer를 하단에 고정시키기 위해 부모 클래스에 하는 �
     padding: 10px
 }
 .title{
-    width: 100px;
+    width: 500px;
     height: 40px;
     margin: 10px;
 }
 .tr_btn, .ea_btn, .li_btn{
     margin: 5px;
 }
-.input_box{
+.output_box{
     width: 700px;
-    height: 260px;
+    height: 560px;
     border: 2px solid black;
     margin : 20px;
     float : left;
 }
-.result_box{
-    width: 700px;
-    height: 260px;
+#output{
+    width: 630px;
+    height: 250px;
     border: 2px solid black;
-    margin : 20px;
-    float : left;
-}
-#result{
-    width: 620px;
-    height: 100px;
-    margin: 10px 35px;
+    margin: 20px 35px;
+    resize: none;
+    overflow: scroll;
 }
 #bottom{
     position:absolute; 
