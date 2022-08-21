@@ -26,12 +26,14 @@
     margin: 20px;
     float : left;
     border: 2px solid black;
+    border-radius: 20px;
 }
 .transport, .eat, .life{
     height: 150px;
     border: 2px solid black;
     margin: 10px;
-    padding: 10px
+    padding: 10px;
+    border-radius: 20px;
 }
 .title{
     width: 500px;
@@ -47,6 +49,7 @@
     border: 2px solid black;
     margin : 20px;
     float : left;
+    border-radius: 20px;
 }
 #output{
     width: 630px;
@@ -54,6 +57,7 @@
     border: 2px solid black;
     margin: 20px 35px;
     resize: none;
+    border-radius: 20px;
     overflow: scroll;
 }
 #bottom{
@@ -62,4 +66,11 @@
     width: 100%;
     height: 50px;
     color: blue;
+}
+#total_carbon{
+    width: 630px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 20px 35px;
 }
