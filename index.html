@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="carbon_footprint_cal/style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <div id="main_box">
@@ -14,27 +15,35 @@
         </div></div></div>
         <div id="name"><h1 id="head">나의 탄소발자국 계산기</h1></div>
         </div><h3 id="sub_cont">2022.08.23 (v1.1.0)</h3></div>
-        <div class="cont_box">
         <div class="option_box">
             <div class="transport">
-                <div class="title_box"><div class="title">교통</div></div>
-            </div>
+            <div class="title_box">
+                <img class="title_icon" src="edit.png">
+                <h2 class="title">교통</h2>
+            </div></div>
             <div class="eat">
-                <div class="title_box"><div class="title">식음료</div></div>
-            </div>
+            <div class="title_box">
+                <img class="title_icon" src="edit.png">
+                <h2 class="title">식음료</h2>
+            </div></div>
             <div class="life">
-                <div class="title_box"><div class="title">생활</div></div>
-            </div>
+            <div class="title_box">
+                <img class="title_icon" src="edit.png">
+                <h2 class="title">생활</h2>
+            </div></div>
         </div><!--지구 생태용량 초과의 날 개념으로 결과 작성-->
         <div class="output_box">
-            <div class="title"><h1>입력값</h1></div>
+            <div class="ou_title_box">
+                <img class="title_icon" src="check2.png">
+                <h2 id="ou_title">입력값</h2>
+            </div>
             <div id="output"></div>
-            <div class="result">
-                <h1><div class="title">하루 탄소 배출 총량</div></h1>
-                <div><h2>나의 오늘 탄소 배출량은</h2><div id="res"></div></div>
+            <div id="result_box">
+                <h1 id="re_1">나의 탄소 발자국은</h1>
+                <h1 id="re_2">오늘 하루 총</h1>
+                <h1><div id="res">0</div><h1 id="re_3">g 입니다.</h1>
             </div>
         </div>
-        </div>
-        <script src="carbon_footprint_cal/fun.js"></script>
+    <script src="fun.js"></script>
     </body>
 </html>
