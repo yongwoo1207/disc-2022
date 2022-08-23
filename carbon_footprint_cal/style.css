@@ -6,7 +6,7 @@ body{
     background-color: white;
 }
 #sub_cont{
-    width: 100px;
+    width: 500px;
     margin: 0px;
     padding-top: 5px;
     padding-left: 240px;
@@ -44,6 +44,7 @@ body{
     margin-top: 15px;
 }
 #logo_img{
+    margin-top: 10px;
     text-align: center;
     width: 100%;
     height: 100%;
@@ -59,26 +60,39 @@ body{
     margin: 26px 0px 0px 0px;
     color: white;
 }
-
-
-
-
 .option_box{
     width: 700px;
     height: 560px;
     margin: 20px;
+    margin-left:40px;
     float : left;
 }
-.transport, .eat, .life{
+.transport, .eat{
     height: 150px;
     width: 100%;
     border: 2px solid black;
-    padding: 10px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+.life{
+    height: 150px;
+    width: 100%;
+    border: 2px solid black;
+    padding: 0px;
+}
+
+
+
+
+
+
+.title_box{
+    background-color: rgb(182, 179, 179);
 }
 .title{
-    width: 500px;
+    width: 100%;
     height: 40px;
-    margin: 10px;
+    margin: 0px;
 }
 .tr_btn, .ea_btn, .li_btn{
     margin: 5px;
@@ -87,7 +101,8 @@ body{
     width: 700px;
     height: 560px;
     border: 2px solid black;
-    margin : 20px;
+    margin : 10px;
+    margin-right: 30px;
     float : right;
 }
 #output{
